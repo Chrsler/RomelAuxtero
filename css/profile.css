@@ -1,0 +1,123 @@
+:root {
+
+    /**
+   * COLORS
+   */
+
+    --shadow_img: 0 0 48px hsla(187, 100%, 82%, 0.4);
+    --biggest-font-size: 2.25rem;
+    --font-bold: 700;
+    --first-color: hsl(93, 54%, 54%);
+}
+
+.profile__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.profile__container {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+
+/*-----------------------------------*\
+  #PROFILE
+\*-----------------------------------*/
+.profile__container {
+    padding-top: 2.5rem;
+    row-gap: 2rem;
+}
+
+.profile__img {
+    width: 270px;
+    filter: drop-shadow(var(--shadow_img));
+    justify-self: center;
+}
+
+.profile__data {
+    text-align: center;
+}
+
+.profile__title {
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-bold);
+    margin-bottom: 1rem;
+}
+
+.profile__title span {
+    color: var(--first-color);
+}
+
+.profile__description {
+    margin-bottom: 3rem;
+}
+
+.profile__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+@media screen and (min-width: 320px) {
+    .containerprofile {
+        margin-inline: 1rem;
+    }
+
+    .profile__title {
+        font-size: 2rem;
+    }
+
+    .profile__buttons {
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .profile__container {
+        grid-template-columns: 400px;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    .containerprofile {
+        margin-inline: auto;
+    }
+
+    .profile__container {
+        grid-template-columns: 480px 535px;
+        align-items: center;
+        column-gap: 4rem;
+        padding-top: 4rem;
+    }
+
+    .profile__img {
+        width: 480px;
+    }
+
+    .profile__data {
+        text-align: initial;
+    }
+
+    .profile__description {
+        margin-bottom: 4.5rem;
+    }
+
+    .profile__buttons {
+        justify-content: initial;
+        column-gap: 1.5rem;
+    }
+
+}
+
+
+
